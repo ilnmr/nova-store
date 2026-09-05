@@ -1,0 +1,71 @@
+{
+  "Common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ!",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "submit": "تأكيد"
+  },
+  "Navigation": {
+    "home": "الرئيسية",
+    "games": "الألعاب",
+    "steam": "ستيم",
+    "buySellAccounts": "بيع وشراء الحسابات",
+    "cart": "السلة",
+    "orders": "الطلبات",
+    "customerSupport": "خدمة العملاء",
+    "settings": "الإعدادات",
+    "login": "تسجيل دخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل خروج",
+    "adminSettings": "إعدادات الإدارة"
+  },
+  "Home": {
+    "title": "مرحباً بك في NOVA STORE",
+    "subtitle": "المنصة الأفضل لشحن الألعاب وبيع الحسابات في مصر",
+    "latestGames": "أحدث الألعاب",
+    "testimonials": "آراء العملاء"
+  },
+  "Footer": {
+    "quickLinks": "روابط سريعة",
+    "followUs": "تابعنا على",
+    "rights": "جميع الحقوق محفوظة ادهم سعيد",
+    "developedBy": "تم التطوير بواسطة @youssefgraphicdesigner"
+  },
+  "Auth": {
+    "loginTitle": "تسجيل الدخول",
+    "registerTitle": "إنشاء حساب جديد",
+    "phoneLabel": "رقم الموبايل",
+    "phonePlaceholder": "01000000000",
+    "passwordLabel": "كلمة المرور",
+    "passwordPlaceholder": "******",
+    "nameLabel": "الاسم بالكامل",
+    "namePlaceholder": "أحمد محمد",
+    "noAccount": "معندكش حساب؟ سجل دلوقتي",
+    "haveAccount": "عندك حساب؟ سجل دخول",
+    "phoneInvalid": "رقم موبايل غير صحيح",
+    "passwordLength": "كلمة المرور لازم تكون 6 حروف على الأقل"
+  },
+  "BuySell": {
+    "title": "بيع وشراء حسابات الألعاب",
+    "subtitle": "اعرض حسابك للبيع أو تصفح الحسابات المتاحة",
+    "sellAccount": "اعرض حساب للبيع",
+    "game": "اللعبة",
+    "accountDetails": "تفاصيل الحساب (المستوى، السكنات، الخ...)",
+    "askingPrice": "السعر المطلوب (ج.م)",
+    "images": "صور الحساب",
+    "imagesHelp": "يمكنك رفع أكثر من صورة",
+    "submit": "إرسال الطلب",
+    "success": "تم تسجيل طلبك بنجاح. سيتم تحويلك للواتساب لإتمام العملية."
+  },
+  "Games": {
+    "title": "شحن الألعاب",
+    "selectPackage": "اختر الباقة",
+    "playerId": "رقم اللاعب (ID)",
+    "zoneId": "رقم المنطقة (Zone ID)",
+    "verifyId": "جاري التحقق...",
+    "idVerified": "معرف صحيح",
+    "idUnverified": "تعذر التحقق التلقائي، يرجى مراجعة المعرف",
+    "checkout": "إتمام الطلب"
+  }
+}

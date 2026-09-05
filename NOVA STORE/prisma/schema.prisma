@@ -1,0 +1,141 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String           @id @default(uuid())
+  name            String
+  phone           String           @unique
+  passwordHash    String
+  role            Role             @default(USER)
+  languagePref    Language         @default(AR)
+  themePref       Theme            @default(DARK)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  orders          Order[]
+  accountListings AccountListing[]
+  reviews         Review[]
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Language {
+  AR
+  EN
+}
+
+enum Theme {
+  LIGHT
+  DARK
+  SYSTEM
+}
+
+model Game {
+  id            String       @id @default(uuid())
+  slug          String       @unique
+  nameAr        String
+  nameEn        String
+  imageUrl      String       @default("")
+  descriptionAr String?
+  descriptionEn String?
+  enabled       Boolean      @default(true)
+  fields        GameField[]
+  packages      Package[]
+  orders        Order[]
+}
+
+model GameField {
+  id                String  @id @default(uuid())
+  gameId            String
+  game              Game    @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  key               String
+  labelAr           String
+  labelEn           String
+  type              String  // 'text', 'number', 'email'
+  required          Boolean @default(true)
+  minLength         Int?
+  maxLength         Int?
+  allowedCharacters String?
+  order             Int     @default(0)
+}
+
+model Package {
+  id       String  @id @default(uuid())
+  gameId   String? // Nullable for steam
+  game     Game?   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  nameAr   String
+  nameEn   String
+  price    Float?
+  imageUrl String?
+  enabled  Boolean @default(true)
+  orders   Order[]
+}
+
+model Order {
+  id                    String      @id @default(uuid())
+  orderNumber           String      @unique
+  userId                String
+  user                  User        @relation(fields: [userId], references: [id])
+  gameId                String?
+  game                  Game?       @relation(fields: [gameId], references: [id])
+  packageId             String?
+  package               Package?    @relation(fields: [packageId], references: [id])
+  submittedFieldValues  Json
+  paymentMethod         String
+  paymentScreenshotUrl  String?
+  aiVerificationResult  String?     // likely_valid, needs_review, likely_invalid
+  status                OrderStatus @default(PENDING)
+  createdAt             DateTime    @default(now())
+  updatedAt             DateTime    @updatedAt
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  CANCELLED
+}
+
+model AccountListing {
+  id             String        @id @default(uuid())
+  userId         String
+  user           User          @relation(fields: [userId], references: [id])
+  game           String
+  accountDetails String
+  priceRequested Float
+  imageUrls      String[]
+  status         ListingStatus @default(PENDING)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+enum ListingStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  SOLD
+}
+
+model Review {
+  id         String   @id @default(uuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  targetType String   // 'store', 'package', 'game'
+  targetId   String?
+  rating     Int
+  comment    String?
+  createdAt  DateTime @default(now())
+}
+
+model Setting {
+  key   String @id
+  value String
+}

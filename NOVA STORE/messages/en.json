@@ -1,0 +1,71 @@
+{
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred!",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit"
+  },
+  "Navigation": {
+    "home": "Home",
+    "games": "Games",
+    "steam": "Steam",
+    "buySellAccounts": "Buy/Sell Accounts",
+    "cart": "Cart",
+    "orders": "Orders",
+    "customerSupport": "Customer Support",
+    "settings": "Settings",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "adminSettings": "Admin Settings"
+  },
+  "Home": {
+    "title": "Welcome to NOVA STORE",
+    "subtitle": "The best platform for game top-ups and accounts in Egypt",
+    "latestGames": "Latest Games",
+    "testimonials": "Customer Reviews"
+  },
+  "Footer": {
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "rights": "جميع الحقوق محفوظة ادهم سعيد",
+    "developedBy": "تم التطوير بواسطة @youssefgraphicdesigner"
+  },
+  "Auth": {
+    "loginTitle": "Login",
+    "registerTitle": "Create New Account",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "01000000000",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "******",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Ahmed Mohamed",
+    "noAccount": "Don't have an account? Register now",
+    "haveAccount": "Already have an account? Login",
+    "phoneInvalid": "Invalid phone number",
+    "passwordLength": "Password must be at least 6 characters"
+  },
+  "BuySell": {
+    "title": "Buy & Sell Game Accounts",
+    "subtitle": "List your account for sale or browse available ones",
+    "sellAccount": "List Account for Sale",
+    "game": "Game",
+    "accountDetails": "Account Details (Level, Skins, etc...)",
+    "askingPrice": "Asking Price (EGP)",
+    "images": "Account Images",
+    "imagesHelp": "You can upload multiple images",
+    "submit": "Submit Listing",
+    "success": "Listing submitted successfully. Redirecting to WhatsApp to complete the process."
+  },
+  "Games": {
+    "title": "Game Top-ups",
+    "selectPackage": "Select Package",
+    "playerId": "Player ID",
+    "zoneId": "Zone ID",
+    "verifyId": "Verifying...",
+    "idVerified": "Valid ID",
+    "idUnverified": "Auto-verification unavailable, please double check your ID",
+    "checkout": "Checkout"
+  }
+}
